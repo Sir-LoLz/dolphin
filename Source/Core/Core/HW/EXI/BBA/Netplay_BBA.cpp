@@ -38,4 +38,4 @@ bool CEXIETHERNET::NetplayBBAnetworkinterface::IsActivated()
   return false;
 }
 
-}  // namespace ExpansionInterfacex
+}  // namespace ExpansionInterface
