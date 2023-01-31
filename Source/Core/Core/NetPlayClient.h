@@ -296,6 +296,7 @@ private:
   void OnGameDigestResult(sf::Packet& packet);
   void OnGameDigestError(sf::Packet& packet);
   void OnGameDigestAbort();
+  void OnNetPlayBBAPacket(sf::Packet& packet);
 
   bool m_is_connected = false;
   ConnectionState m_connection_state = ConnectionState::Failure;

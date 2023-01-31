@@ -69,7 +69,7 @@ void BroadbandAdapterSettingsDialog::InitControls()
 
     // This window is not needed but is here to prevent crashing. considering This adapter won't be
     // visible to the end user it does not matter anyway.
-  case Type::NetplayBBA:  // TODO: Remove this once the MAC automatically comes from the host
+  case Type::NetPlayBBA:  // TODO: Remove this once the MAC automatically comes from the host
     address_label = new QLabel(tr("There is nothing to do here.:"));
     address_placeholder = QString::fromStdString("This info will be filled in by the host");
     current_address = QString::fromStdString(Config::Get(Config::NETPLAY_BBA_MAC));
@@ -130,7 +130,7 @@ void BroadbandAdapterSettingsDialog::SaveAddress()
     Config::SetBaseOrCurrent(Config::MAIN_BBA_XLINK_IP, bba_new_address);
     break;
 
-  case Type::NetplayBBA:
+  case Type::NetPlayBBA:
     Config::SetBaseOrCurrent(Config::NETPLAY_BBA_MAC, bba_new_address);
     break;
   }

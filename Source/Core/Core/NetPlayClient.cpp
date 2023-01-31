@@ -464,6 +464,10 @@ void NetPlayClient::OnData(sf::Packet& packet)
     OnGameDigestAbort();
     break;
 
+  case MessageID::NetPlayBBAPacket:
+    OnNetPlayBBAPacket(packet);
+    break;
+
   default:
     PanicAlertFmtT("Unknown message received with id : {0}", static_cast<u8>(mid));
     break;
@@ -668,6 +672,11 @@ void NetPlayClient::OnPadData(sf::Packet& packet)
     m_pad_buffer.at(map).Push(pad);
     m_gc_pad_event.Set();
   }
+}
+
+void NetPlayClient::OnNetPlayBBAPacket(sf::Packet& packet)
+{
+  PanicAlertFmtT("NetPlayBBA packet recived.");
 }
 
 void NetPlayClient::OnPadHostData(sf::Packet& packet)

@@ -300,7 +300,7 @@ void GameCubePane::OnConfigPressed(ExpansionInterface::Slot slot)
   }
   case ExpansionInterface::EXIDeviceType::NetPlayBBA:
   {
-    BroadbandAdapterSettingsDialog(this, BroadbandAdapterSettingsDialog::Type::NetplayBBA).exec();
+    BroadbandAdapterSettingsDialog(this, BroadbandAdapterSettingsDialog::Type::NetPlayBBA).exec();
     return;
   }
   case ExpansionInterface::EXIDeviceType::EthernetBuiltIn:

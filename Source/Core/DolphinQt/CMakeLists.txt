@@ -347,6 +347,7 @@ add_executable(dolphin-emu
   Updater.h
   WiiUpdate.cpp
   WiiUpdate.h
+  Netplay_BBA.cpp
 )
 
 if (NOT WIN32)

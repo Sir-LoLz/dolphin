@@ -184,6 +184,8 @@ enum class MessageID : u8
   SyncGCSRAM = 0xF0,
   SyncSaveData = 0xF1,
   SyncCodes = 0xF2,
+
+  NetPlayBBAPacket = 0xF3
 };
 
 enum class ConnectionError : u8
