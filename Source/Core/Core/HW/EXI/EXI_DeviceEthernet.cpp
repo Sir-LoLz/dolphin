@@ -19,6 +19,7 @@
 #include "Core/HW/EXI/EXI.h"
 #include "Core/HW/Memmap.h"
 #include "Core/PowerPC/PowerPC.h"
+#include "core/HW/EXI/BBA/NetPlay_BBA.h"
 
 namespace ExpansionInterface
 {
@@ -482,6 +483,7 @@ void CEXIETHERNET::SendFromDirectFIFO()
   const u16 size = Common::BitCastPtr<u16>(&mBbaMem[BBA_TXFIFOCNT]);
   if (m_network_interface->SendFrame(frame, size))
     PowerPC::debug_interface.NetworkLogger()->LogBBA(frame, size);
+  NetPlayBBAFrameNamespace::ProccessNetPlayBBAFrameclass::ProccessNetplayBBAFramefunction();
 }
 
 void CEXIETHERNET::SendFromPacketBuffer()
